@@ -1,0 +1,48 @@
+ version: 2
+  updates:
+    # Enable version updates for npm (Node.js)
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+        interval: "weekly"
+        day: "monday"
+        time: "09:00"
+      open-pull-requests-limit: 5
+      reviewers:
+        - "kyonyhk"
+      commit-message:
+        prefix: "deps"
+        include: "scope"
+
+    # Enable version updates for GitHub Actions
+    - package-ecosystem: "github-actions"
+      directory: "/"
+      schedule:
+        interval: "weekly"
+        day: "monday"
+        time: "09:00"
+      open-pull-requests-limit: 3
+      reviewers:
+        - "kyonyhk"
+      commit-message:
+        prefix: "ci"
+        include: "scope"
+
+    # Enable version updates for Docker
+    - package-ecosystem: "docker"
+      directory: "/"
+      schedule:
+        interval: "weekly"
+        day: "monday"
+        time: "09:00"
+      open-pull-requests-limit: 2
+      reviewers:
+        - "kyonyhk"
+      commit-message:
+        prefix: "docker"
+
+  # Global configuration for all ecosystems
+  registries:
+    npm-registry:
+      type: npm-registry
+      url: https://registry.npmjs.org
