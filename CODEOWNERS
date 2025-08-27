@@ -1,0 +1,30 @@
+# Global ownership - you own everything by default
+  * @kyonyhk
+
+  # Landing page specific
+  /landing/ @kyonyhk
+
+  # App specific (when created)
+  /app/ @kyonyhk
+
+  # Infrastructure and CI/CD
+  /.github/ @kyonyhk
+  /infra/ @kyonyhk
+  **/ci.yml @kyonyhk
+  **/deploy.yml @kyonyhk
+
+  # Documentation
+  /docs/ @kyonyhk
+  README.md @kyonyhk
+  *.md @kyonyhk
+
+  # Configuration files
+  package.json @kyonyhk
+  *.config.js @kyonyhk
+  *.config.ts @kyonyhk
+  Dockerfile @kyonyhk
+  docker-compose.yml @kyonyhk
+
+  # Security sensitive
+  /.env* @kyonyhk
+  /secrets/ @kyonyhk
